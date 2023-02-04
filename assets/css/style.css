@@ -123,8 +123,6 @@ section {
   min-height: 100vh;
 }
 
-
-
 footer {
   background-color: var(--oxford-blue);
   backdrop-filter: blur(15px);
@@ -139,4 +137,39 @@ i {
   font-size:50px !important;
   padding: 0 1.5%;
   color:white;
+}
+
+/* custom header section */
+
+/* Navigation styles */
+
+#navigation {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 350px;
+}
+
+.hero-container { 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2%;
+  background: linear-gradient(180deg, rgba(32,32,33, 0) 80%, var(--shadow) 90%, rgb(32, 32, 32) 100%);
+}
+
+.fa-chevron-down {
+  color: var(--cool-grey);
+}
+
+header:hover .fa-chevron-down {
+  animation: enlarge 1s linear 0s infinite alternate;
+  transition: 2s;
+}
+
+header:hover .fa-chevron-down:hover {
+  transform: rotate(180deg);
+  animation: enlarge 1s linear 0s infinite alternate;
+  transition: 2s;
 }
