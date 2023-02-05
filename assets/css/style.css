@@ -1,3 +1,23 @@
+/* Declare variables */
+
+:root {
+  --oxford-blue: rgba(15, 26, 58, 0.75);
+  --oxford-blue-op: rgb(15, 26, 58);
+  --cool-grey: #9493B7;
+  --liberty: #5D67A9;
+  --space-cadet: rgb(33, 50, 97);
+  --shadow: rgb(32, 32, 32, 0.6);
+}
+
+/* animation code */
+
+@keyframes enlarge {
+  from {scale: 1;}
+  to {scale: 1.5;}
+}
+
+/* reset */
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +27,10 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  background: url(./hero_img.jpg) no-repeat fixed center;
+  background-size: cover;
 }
 
 h1,
@@ -21,3 +45,270 @@ h6 {
 p {
   margin: 0;
 }
+
+/* Resets */
+
+html, body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(../images/hero_img.jpg) no-repeat fixed center;
+  background-size: cover;
+}
+
+/* header styling for logo. nav and hero*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: 'La Belle Aurore';
+  font-weight: lighter;
+  color: white;
+}
+
+h2, p {
+  color: rgb(218, 217, 217);
+  line-height: 30px;
+  font-family: 'Corben';
+  font-size: 50px;
+  margin: 2.5%;
+  text-align: center;
+}
+
+p {
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+header nav {
+  background: var(--shadow);
+  box-shadow: 0px 5px 5px var(--shadow), 0px -5px 5px var(--shadow) ;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0% 5%;
+  width: 100%;
+  margin-top: 15%;
+}
+
+nav a {
+  margin: 2%;
+  width: fit-content;
+  font-size: 25px;
+  color: rgb(222, 222, 222);
+  font-family: 'Corben';
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, i:hover, .card-text p:hover {color: var(--cool-grey)}
+
+a:hover, .card-text p:hover {text-decoration: underline}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: fit-content;
+  background-color: var(--oxford-blue);
+  box-shadow: 0px 5px 25px var(--shadow);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+footer {
+  background-color: var(--oxford-blue);
+  backdrop-filter: blur(15px);
+  height: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+i {
+  font-size:50px !important;
+  padding: 0 1.5%;
+  color: rgb(222, 222, 222);
+}
+
+/* custom header section */
+
+/* Navigation styles */
+
+#navigation {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 350px;
+}
+
+.hero-container { 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2%;
+  background: linear-gradient(180deg, rgba(32,32,33, 0) 80%, var(--shadow) 90%, rgb(32, 32, 32) 100%);
+}
+
+.fa-chevron-down {
+  color: var(--cool-grey);
+}
+
+header:hover .fa-chevron-down {
+  animation: enlarge 1s linear 0s infinite alternate;
+  transition: 2s;
+}
+
+header:hover .fa-chevron-down:hover {
+  transform: rotate(180deg);
+  animation: enlarge 1s linear 0s infinite alternate;
+  transition: 2s;
+}
+
+/* Main body styling */
+
+/* About me styling */
+
+#about {
+  padding: 5% 15%;
+  background-color: rgb(32, 32, 32);
+}
+
+#about-me-text, #about-me-profile-pic {
+  flex: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+}
+
+#about-me-profile-pic img {
+  width: 300px;
+  border-radius: 100rem;
+  box-shadow: 0px 5px 25px black;
+}
+
+/* Work styling */
+
+#work {
+ max-width: 1200px;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 0 5%;
+  margin: 5%;
+  backdrop-filter: blur(15px);
+}
+
+.card-container {
+  width: 100%;
+  height: fit-content;
+  margin: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card1 {background-image: url(../images/Recipedia_Landing_Page.PNG)} 
+
+.card2 {background-image: url(../images/Weather_Dashboard.PNG)}
+
+.card3 {background-image: url(../images/Daily_Planner.PNG)} 
+
+.card4 {background-image: url(../images/Javascript_quiz.PNG)}
+
+.card {
+  margin: 0 5% 5% 5%;
+  width: 300px;
+  height: 250px;;
+  background-size: cover;
+  box-shadow: 0px 10px 25px var(--shadow);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.card .fa-chevron-down {
+  margin-top: 65%;
+  transition: 3s;
+  z-index: 1;
+}
+
+.card:hover .fa-chevron-down {
+  transform: rotate(180deg);
+  margin-top: 30%;
+  transition: 3s;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0 10px;
+  width: 100%;
+  background-color: rgba(32, 32, 32, 0.9);
+  box-shadow: 0px -30px 25px 20px rgba(32, 32, 32, 0.9);
+  color:rgb(218, 217, 217);
+  min-height: 17vh;
+}
+
+.card-text h3, .card-text h5 {
+  font-family: 'Corben';
+  font-weight: lighter;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.card-text p:hover {
+  color: var(--cool-grey);
+  text-decoration: underline;
+}
+
+/* Contact styling */
+
+#contact {
+  width: 100%;
+  background-color: var(--oxford-blue-op);
+  box-shadow: 0px -5px 25px var(--shadow);
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+
