@@ -112,6 +112,10 @@ a {
   text-decoration: none;
 }
 
+a:hover, i:hover, .card-text p:hover {color: var(--cool-grey)}
+
+a:hover, .card-text p:hover {text-decoration: underline}
+
 main {
   min-height: 100vh;
   display: flex;
@@ -144,7 +148,7 @@ footer {
 i {
   font-size:50px !important;
   padding: 0 1.5%;
-  color:white;
+  color: rgb(222, 222, 222);
 }
 
 /* custom header section */
