@@ -53,11 +53,6 @@ html, body {
   scroll-behavior: smooth;
 }
 
-body {
-  background: url(../images/hero_img.jpg) no-repeat fixed center;
-  background-size: cover;
-}
-
 /* header styling for logo. nav and hero*/
 
 header {
