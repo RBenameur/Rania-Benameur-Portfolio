@@ -268,7 +268,7 @@ header:hover .fa-chevron-down:hover {
   background-color: rgba(32, 32, 32, 0.9);
   box-shadow: 0px -30px 25px 20px rgba(32, 32, 32, 0.9);
   color:rgb(218, 217, 217);
-  min-height: 17vh;
+  min-height: 50vh;
 }
 
 .card-text h3, .card-text h5 {
